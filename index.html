@@ -30,11 +30,12 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); colo
 </style>
 </head>
 <body class="selection:bg-[var(--orange-light)] selection:text-[var(--orange)]">
+  
   <!-- CODE 1 - BANDEAU DEFILANT URGENT - A COLLER JUSTE APRES <body> -->
 <style>
   @keyframes defile { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
   .bandeau-urgent { background: #1A1300; color: white; font-size: 13px; padding: 10px 0; overflow: hidden; white-space: nowrap; position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; }
-  .bandeau-contenu { display: inline-block; animation: defile 25s linear infinite; padding-left: 100%; }
+  .bandeau-contenu { display: inline-block; animation: defile 35s linear infinite; padding-left: 100%; }
   .bandeau-contenu a { background: #25D366; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 800; text-decoration: none; margin: 0 8px; }
   .bandeau-contenu a:hover { background: #128C7E; }
   /* On pousse la barre drapeau et le header un peu plus bas */
