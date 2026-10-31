@@ -234,5 +234,12 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); colo
 <script>
 window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('bg-white/80',window.scrollY>20); document.getElementById('header').classList.toggle('backdrop-blur-xl',window.scrollY>20);})
 </script>
+
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
 </body>
 </html>

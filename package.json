@@ -1,0 +1,23 @@
+{
+  "name": "chiasma-site",
+  "version": "1.0.0",
+  "description": "CHIASMA - La permutation entre enseignants, enfin simple",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rythmique/chiasma-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rythmique/chiasma-site/issues"
+  },
+  "homepage": "https://github.com/Rythmique/chiasma-site#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
