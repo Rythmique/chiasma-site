@@ -3,241 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CHIASMA - La permutation entre enseignants, enfin simple</title>
-  <meta name="description" content="CHIASMA - Plateforme 100% gratuite pour les enseignants de Côte d'Ivoire. Trouvez votre binôme de permutation par DRENA, IEPP, discipline et localité. Profils vérifiés, messagerie intégrée.">
-<meta name="keywords" content="CHIASMA, permutation enseignant Côte d'Ivoire, binôme enseignant, DRENA, IEPP, mutation enseignant CI, CHIASMA.pro">
+<title>CHIASMA - Permutation Enseignants Côte d'Ivoire | Trouver Binôme DRENA IEPP</title>
+<meta name="description" content="CHIASMA est la 1ère plateforme 100% gratuite pour les enseignants de Côte d'Ivoire. Trouvez votre binôme de permutation, mutation, affectation par DRENA, IEPP, discipline, MENA. Primaire et Secondaire.">
+<meta name="keywords" content="CHIASMA, CHIASMA.pro, permutation enseignant Côte d'Ivoire, mutation enseignant, affectation enseignant, binôme permutation, échange poste enseignant, DRENA, IEPP, MENA Côte d'Ivoire, enseignant primaire, professeur secondaire, travail enseignant, emploi enseignant CI, mobilité enseignant">
 <meta name="author" content="CHIASMA">
+<meta name="robots" content="index, follow">
 <meta property="og:title" content="CHIASMA - Permutation Enseignants CI">
-<meta property="og:description" content="Trouvez votre binôme de permutation en Côte d'Ivoire. Gratuit et sécurisé.">
+<meta property="og:description" content="Trouvez votre binôme de permutation en Côte d'Ivoire. Gratuit, sécurisé, profils vérifiés.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://chiasma-pro.vercel.app/">
+
+<!-- CODE MAGIQUE POUR GOOGLE -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "CHIASMA",
+  "applicationCategory": "EducationApplication",
+  "operatingSystem": "Android",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "XOF" },
+  "description": "Plateforme de permutation, mutation et mobilité pour les enseignants de Côte d'Ivoire - MENA",
+  "countryOfOrigin": "CI",
+  "keywords": "enseignant, permutation, DRENA, IEPP, MENA"
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
-:root {
-  --bg: #FFFEFB;
-  --surface: #FFFFFF;
-  --text: #1A1300;
-  --text-muted: #7A6F5A;
-  --orange: #FF8200;
-  --orange-light: #FFF0E0;
-  --orange-dark: #E67300;
-  --green: #009E60;
-  --green-light: #E6F5EF;
-  --border: #F2EADF;
-  --success: #009E60;
-}
-html { scroll-behavior: smooth; }
-body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); }
-.serif { font-family: 'Instrument Serif', serif; }
-.drapeau-bar { height:4px; display:flex; }
-.drapeau-bar span:nth-child(1){ background:#FF8200; flex:1 }
-.drapeau-bar span:nth-child(2){ background:#FFFFFF; flex:1; border-top:1px solid #eee; border-bottom:1px solid #eee }
-.drapeau-bar span:nth-child(3){ background:#009E60; flex:1 }
+:root { --bg:#FFFEFB; --text:#1A1300; --text-muted:#7A6F5A; --orange:#FF8200; --orange-light:#FFF0E0; --green:#009E60; --green-light:#E6F5EF; --border:#F2EADF; }
+html{scroll-behavior:smooth} body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text)}
+.serif{font-family:'Instrument Serif',serif}
+.drapeau-bar{height:4px;display:flex} .drapeau-bar span:nth-child(1){background:#FF8200;flex:1} .drapeau-bar span:nth-child(2){background:#FFFFFF;flex:1} .drapeau-bar span:nth-child(3){background:#009E60;flex:1}
 </style>
 </head>
-<body class="selection:bg-[var(--orange-light)] selection:text-[var(--orange)]">
-  
-<!-- CODE 1 - BANDEAU SANS COUPURE - NUMERO INTEGRE -->
+<body>
+
 <style>
-  @keyframes defile-loop { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .bandeau-urgent { background: #1A1300; color: white; font-size: 13px; padding: 10px 0; overflow: hidden; white-space: nowrap; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
-  .bandeau-track { display: flex; width: max-content; animation: defile-loop 40s linear infinite; }
-  .bandeau-contenu { display: flex; align-items: center; white-space: nowrap; padding-right: 50px; }
-  .bandeau-contenu a { background: #25D366; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 800; text-decoration: none; margin: 0 12px; }
-  .drapeau-bar { top: 38px !important; }
-  #header { top: 42px !important; }
+@keyframes defile-loop{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.bandeau-urgent{background:#1A1300;color:white;font-size:13px;padding:10px 0;overflow:hidden;white-space:nowrap;position:fixed;top:0;left:0;right:0;z-index:100}
+.bandeau-track{display:flex;width:max-content;animation:defile-loop 40s linear infinite}
+.bandeau-contenu{display:flex;align-items:center;white-space:nowrap;padding-right:50px}
+.bandeau-contenu a{background:#25D366;color:white;padding:4px 12px;border-radius:20px;font-weight:800;text-decoration:none;margin:0 12px}
+.drapeau-bar{top:38px!important} #header{top:42px!important}
 </style>
 <div class="bandeau-urgent">
-  <div class="bandeau-track">
-    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
-    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
-    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
-    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
-  </div>
+<div class="bandeau-track">
+<span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+<span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+<span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+<span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+</div>
 </div>
 
-<!-- DRAPEAU IVOIRIEN TOP -->
 <div class="drapeau-bar fixed top-0 inset-x-0 z-[60]"></div>
 
-<header id="header" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b bg-transparent border-transparent py-5" style="top:4px">
-<div class="max-w- mx-auto px-6 lg:px-8 flex items-center justify-between">
-<a href="#" class="flex items-center gap-3 group">
+<!-- TON DESIGN RESTE IDENTIQUE ICI... (je te laisse le hero, features, etc) -->
+<!-- ... Copie tout le reste de ton body actuel à partir de <header> ... -->
 
-  <!-- 🔴 LOGO ICI - Remplace facilement -->
-  <!-- Pour changer le logo: 1) Ajoute logo.png dans ton repo GitHub  2) C'est tout ! -->
-  <div class="w-10 h-10 rounded-xl overflow-hidden bg-[var(--orange)] flex items-center justify-center text-white font-black text- tracking-tighter group-hover:rotate-3 transition-transform shadow-sm">
-    <img id="site-logo" src="logo.png" alt="CHIASMA" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.style.display='none'" onerror="this.style.display='none'">
-    <span>C</span>
-  </div>
-  <!-- FIN LOGO -->
-
-  <span class="font-bold text- tracking-tight">CHIASMA<span class="text-[var(--orange)]">.pro</span></span>
-  <span class="ml-2 hidden md:inline-flex text- font-bold tracking-[0.15em] px-2 py-0.5 rounded-full bg-[var(--orange-light)] text-[var(--orange)]">CÔTE D'IVOIRE</span>
-</a>
-<nav class="hidden lg:flex items-center gap-8 text- font-medium">
-<a href="#features" class="hover:text-[var(--orange)] transition-colors">Fonctionnalités</a>
-<a href="#pourquoi" class="hover:text-[var(--orange)] transition-colors">Pourquoi ?</a>
-<a href="#download" class="hover:text-[var(--orange)] transition-colors">Télécharger</a>
-<a href="https://whatsapp.com/channel/0029VbBrLYMGOj9txhx7zj12" target="_blank" class="flex items-center gap-1.5 text-[var(--green)] font-semibold">【entity-WhatsApp¦canonical_name=WhatsApp】</a>
-</nav>
-<div class="flex items-center gap-3">
-<a href="#download" class="hidden md:inline-flex items-center gap-2 bg-[var(--text)] text-white px-5 py-2.5 rounded-full text-[13.5px] font-semibold hover:bg-black transition-colors">Télécharger ↓</a>
-</div>
-</div>
-</header>
-
-<!-- HERO -->
-<section class="relative pt-10 overflow-hidden">
-<div class="absolute inset-0 -z-10">
-<div class="absolute inset-0 bg-[radial-gradient(60%_80%_at_70%_10%,#FFF0E0_0%,transparent_60%),radial-gradient(40%_60%_at_10%_80%,#E6F5EF_0%,transparent_60%)]"></div>
-</div>
-<div class="max-w- mx-auto px-6 lg:px-8 pt-28 lg:pt-36 pb-16 lg:pb-24 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-8 items-center">
+<!-- AJOUTE CETTE NOUVELLE SECTION JUSTE AVANT TON FOOTER POUR GOOGLE -->
+<section style="max-width:1200px;margin:0 auto;padding:40px 24px;background:white;border-radius:28px;border:1px solid #F2EADF;margin-top:20px">
+<h2 style="font-family:'Instrument Serif';font-size:32px;margin-bottom:20px;text-align:center">CHIASMA c'est pour qui ?</h2>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;text-align:left;font-size:14px;line-height:1.7;color:#555">
 <div>
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[var(--border)] shadow-sm text- font-semibold mb-6">
-<span class="w-2 h-2 rounded-full bg-[var(--green)] animate-pulse"></span> 100% Gratuit - Pour les enseignants de Côte d'Ivoire <span class="px-1.5 py-0.5 rounded-full bg-[var(--green-light)] text-[var(--green)] text-">NOUVEAU</span>
+<h3 style="font-weight:800;color:#1A1300">👨‍🏫 Tous les enseignants du MENA</h3>
+<p>Enseignants du primaire (instituteurs, instituteurs adjoints), professeurs du secondaire (collège, lycée), éducateurs, professeurs de CAFOP. Que vous soyez à Abidjan, Bouaké, Daloa, Korhogo, Yamoussoukro, San Pedro, Man, Gagnoa, partout en Côte d'Ivoire.</p>
 </div>
-<h1 class="serif text- md:text- lg:text- leading-[0.95] tracking-[-0.03em] font-normal">La permutation entre enseignants,<br><span class="italic text-[var(--orange)]">enfin simple.</span></h1>
-<p class="mt-6 text- leading-7 text-[var(--text-muted)] max-w-">CHIASMA aide les enseignants du primaire et secondaire à trouver un <b>binôme de permutation</b>, suivre leurs demandes et découvrir des opportunités de mobilité. Sécurisé avec profils vérifiés.</p>
-<div class="mt-8 flex flex-wrap gap-3">
-<a href="#download" class="inline-flex items-center gap-2.5 bg-[var(--orange)] text-white px-7 py-3.5 rounded-full font-bold text-[14.5px] hover:bg-[var(--orange-dark)] transition-all hover:scale-[1.02]">📱 Télécharger l'APK</a>
-<a href="#features" class="inline-flex items-center gap-2.5 bg-white border border-[var(--border)] px-7 py-3.5 rounded-full font-semibold text-[14.5px]">Voir comment ça marche</a>
-</div>
-<div class="mt-8 flex items-center gap-4">
-<div class="text-"><div class="font-semibold flex items-center gap-1">⭐ Conçu pour la Côte d'Ivoire</div><div class="text-[var(--text-muted)]">DRENA • IEPP • Discipline • Localité</div></div>
-</div>
-</div>
-
-<!-- MOCKUP TELEPHONE -->
-<div class="relative lg:h- flex items-center justify-center">
-<div class="relative">
-<div class="absolute -inset-10 bg-gradient-to-br from-[var(--orange-light)] to-[var(--green-light)] rounded- blur-2xl"></div>
-<div class="relative w- h- bg-black rounded- p-3 shadow-2xl">
-<div class="w-full h-full bg-white rounded- overflow-hidden relative">
-<div class="absolute top-0 inset-x-0 h-10 bg-white z-10 flex items-center justify-center"><div class="w-24 h-6 bg-black rounded-full"></div></div>
-<div class="pt-12 px-5 pb-5 h-full flex flex-col">
-<div class="flex items-center justify-between"><div class="w-10 h-10 rounded-2xl bg-[var(--orange)] grid place-items-center text-white font-black">C</div><div class="text- font-bold bg-green-100 text-green-700 px-2 py-1 rounded-full">VÉRIFIÉ ✓</div></div>
-<div class="mt-6"><p class="text- font-bold tracking-widest text-[var(--orange)]">TROUVER UN BINÔME</p><h3 class="serif text- leading-none mt-1">Permutation<br>disponible</h3></div>
-<div class="mt-5 space-y-3">
-<div class="p-3.5 rounded-2xl border bg-orange-50 border-orange-200"><div class="text- font-bold">Prof de Maths • Secondaire</div><div class="text- text-zinc-600">Abidjan → Bouaké • DRENA 1</div><div class="mt-2 text- bg-white px-2 py-1 rounded-full inline-block">✅ Profil vérifié</div></div>
-<div class="p-3.5 rounded-2xl border bg-green-50 border-green-200"><div class="text- font-bold">Instituteur • Primaire</div><div class="text- text-zinc-600">Yamoussoukro → Daloa • IEPP Centre</div></div>
-<div class="p-3.5 rounded-2xl border bg-zinc-50"><div class="text- font-bold">Offre: Prof d'Anglais</div><div class="text- text-zinc-500">Poste vacant - Korhogo</div></div>
-</div>
-<div class="mt-auto p-3 rounded-2xl bg-[var(--text)] text-white flex items-center justify-between text-"><span><b>Messagerie</b> • 2 nouveaux</span><span>→</span></div>
-</div>
-</div>
-</div>
-<div class="absolute -left-12 top-[18%] bg-white rounded-2xl shadow-lg border p-3 flex items-center gap-2.5 animate-bounce"><div class="w-9 h-9 rounded-xl bg-orange-50 grid place-items-center">🔍</div><div class="text-"><b>Recherche Filtrée</b><br><span class="text-zinc-500">DRENA / IEPP</span></div></div>
-<div class="absolute -right-10 bottom-[20%] bg-white rounded-2xl shadow-lg border p-3 flex items-center gap-2.5"><div class="w-9 h-9 rounded-xl bg-green-50 grid place-items-center">✓</div><div class="text-"><b>Profils Vérifiés</b><br><span class="text-zinc-500">Sécurité</span></div></div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- FEATURES -->
-<section id="features" class="max-w- mx-auto px-6 lg:px-8 py-20 lg:py-28">
-<div class="max-w-"><p class="text- font-bold tracking-[0.2em] text-[var(--orange)]">FONCTIONNALITÉS RÉELLES</p><h2 class="serif text- md:text- leading-[0.95] mt-3">Tout pour ta mobilité.<br>Rien de compliqué.</h2></div>
-<div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-orange-50 text-orange-600 grid place-items-center text-xl">🔄</div><h3 class="mt-4 font-bold">Moteur de Binôme</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">Trouve ton binôme par discipline, niveau (primaire/secondaire), région, DRENA, IEPP, localité. Recherche ultra-rapide parmis les miliers de binomes qui cherchent à permuter.</p></div>
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-green-50 text-green-600 grid place-items-center text-xl">💬</div><h3 class="mt-4 font-bold">Messagerie & Notifs</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">Discute direct avec ton futur binôme. Notifications instantanées pour chaque demande.</p></div>
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 grid place-items-center text-xl">📊</div><h3 class="mt-4 font-bold">Suivi de Demandes</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">Suis l'état de ta demande de permutation en ligne. Plus besoin de te déplacer.</p></div>
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-zinc-100 grid place-items-center text-xl">💼</div><h3 class="mt-4 font-bold">Offres & Mobilité</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">Consulte les offres d'emploi et opportunités dans le secteur éducatif ivoirien.</p></div>
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-green-50 text-green-600 grid place-items-center text-xl">🛡️</div><h3 class="mt-4 font-bold">Profils Vérifiés</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">Sécurité et crédibilité. Chaque enseignant est vérifié pour éviter les faux profils.</p></div>
-<div class="bg-white border rounded- p-6"><div class="w-11 h-11 rounded-xl bg-orange-50 text-orange-600 grid place-items-center text-xl">⚡</div><h3 class="mt-4 font-bold">Base de données en temps réel</h3><p class="mt-2 text-[13.5px] text-zinc-500 leading-6">rapide, stable, hors-ligne partiel. fluide avec indexation de vos recherches</p></div>
-</div>
-</section>
-
-<!-- POURQUOI -->
-<section id="pourquoi" class="relative bg-[#1A1300] text-white overflow-hidden rounded- mx-3 lg:mx-6">
-<div class="relative max-w- mx-auto px-6 lg:px-10 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
 <div>
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text- font-semibold tracking-widest">🇨🇮 POURQUOI CHIASMA ?</div>
-<h2 class="serif text- md:text- leading-[0.9] mt-6">Fini les galères de <span class="text-orange-400 italic">permutation.</span></h2>
-<p class="mt-6 text- leading-7 text-zinc-400 max-w-">Avant, il fallait chercher pendant des mois. Avec CHIASMA, tu trouves ton binôme en quelques clics, selon tes vrais critères.</p>
-<div class="mt-8 space-y-3 text-sm text-zinc-300">
-<p>✓ Plus de 500 enseignants déjà inscrits (beta)</p>
-<p>✓ 100% gratuit, pas de frais cachés</p>
-<p>✓ Données sécurisées</p>
+<h3 style="font-weight:800;color:#1A1300">🔄 Toutes les mobilités</h3>
+<p>Permutation volontaire, échange de poste, mutation, affectation, rapprochement familial, convenance personnelle. Trouvez un binôme qui veut exactement l'inverse de vous : Abidjan ↔ Intérieur, Nord ↔ Sud.</p>
 </div>
+<div>
+<h3 style="font-weight:800;color:#1A1300">🏫 Mots-clés de l'école ivoirienne</h3>
+<p>Recherche par DRENA, IEPP, DDENET, DREN, discipline (Maths, Français, Anglais, SVT, Histoire-Géo, EPS...), statut, ancienneté. Travail d'enseignant, emploi enseignant, fonction publique enseignante CI.</p>
 </div>
-<div class="grid gap-4">
-<div class="bg-white/[0.06] border border-white/10 rounded- p-6"><b class="text-orange-300">Problème actuel:</b><br><span class="text-zinc-400 text-sm">Groupes WhatsApp saturés, arnaques, pas de filtres par DRENA/IEPP, déplacements inutiles.</span></div>
-<div class="bg-[var(--orange)] rounded- p-6 text-white"><b>Solution CHIASMA:</b><br><span class="text-sm text-white/90">Moteur intelligent + messagerie intégrée + profils vérifiés + suivi officiel de ta demande.</span></div>
-</div>
-</div>
-</section>
-<!-- CODE 2 - BOUTONS CONTACT DIRECT - A COLLER JUSTE AVANT <!-- DOWNLOAD --> -->
-<section id="contact-direct" style="max-width:1200px; margin: 0 auto; padding: 40px 24px;">
-  <div style="background: white; border: 1px solid #F2EADF; border-radius: 28px; padding: 32px; text-align: center;">
-    <h3 style="font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 8px;">Une préoccupation ? Écrivez-nous direct</h3>
-    <p style="color: #7A6F5A; font-size: 14px; margin-bottom: 24px;">Cliquez sur un bouton, vous arrivez directement sur nos pages pour nous parler.</p>
-    
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 700px; margin: 0 auto;">
-      
-      <!-- BOUTON WHATSAPP -->
-      <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#25D366; color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
-        <span>💬</span> WhatsApp Direct
-      </a>
-
-      <!-- BOUTON FACEBOOK -->
-      <a href="___COLLE_TON_LIEN_FACEBOOK_ICI___" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#1877F2; color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
-        <span>📘</span> Page Facebook
-      </a>
-
-      <!-- BOUTON INSTAGRAM -->
-      <a href="___COLLE_TON_LIEN_INSTAGRAM_ICI___" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
-        <span>📸</span> Instagram DM
-      </a>
-
-    </div>
-  </div>
-</section>
-<!-- FIN CODE 2 -->
-<!-- DOWNLOAD -->
-<section id="download" class="max-w- mx-auto px-6 lg:px-8 py-20 lg:py-28">
-<div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-stretch">
-<div class="bg-white border border-[var(--border)] rounded- p-8 lg:p-10 flex flex-col">
-<p class="text- font-bold tracking-[0.2em] text-[var(--orange)]">TÉLÉCHARGER GRATUITEMENT</p>
-<h2 class="serif text- md:text- leading-[0.9] mt-3">Prêt à trouver<br>ton binôme ?</h2>
-<p class="mt-4 text-[var(--text-muted)] text- leading-6">Installation en 30 secondes. Aucune pub. Choisis ta version selon ton téléphone.</p>
-
-<!-- BOUTONS APK -->
-<div class="mt-8 grid gap-3">
-<a href="./chiasma-moderne.apk" download class="group flex items-center justify-between bg-[#1A1300] text-white px-6 py-4 rounded-2xl hover:bg-black transition-all hover:scale-[1.01]">
-<div class="flex items-center gap-3"><span class="text-2xl">📱</span><div class="text-left"><div class="font-bold text-">CHIASMA - Téléphones récents</div><div class="text- opacity-70">Recommandé - 95% des téléphones</div></div></div>
-<span class="bg-[var(--orange)] text-white text- font-bold px-3 py-1 rounded-full">PRINCIPAL</span>
-</a>
-<a href="./chiasma-anciens-telephones.apk" download class="group flex items-center gap-3 bg-white border-2 border-[var(--border)] px-6 py-4 rounded-2xl hover:border-[var(--orange)] transition-colors">
-<span class="text-2xl">📲</span><div class="text-left"><div class="font-bold text-">CHIASMA - Anciens téléphones</div><div class="text- text-zinc-500">Pour téléphones avant 2018</div></div>
-</a>
 </div>
 
-<div class="mt-6 p-4 bg-orange-50 border border-orange-200 rounded-xl text- leading-5">
-<b>📥 Comment installer ?</b><br>
-1. Clique sur le bouton principal ci-dessus<br>
-2. Si Android bloque: Paramètres → Autoriser cette source<br>
-3. Ouvre l'APK → Installer → C'est prêt !
-</div>
-<div class="mt-4 flex items-center gap-2 text- text-zinc-500">🔒 Vérifié, sécurisé ••• ~35 MB</div>
-</div>
-
-<div class="bg-[#FFFEF5] border border-[#F2EADF] rounded- p-8 lg:p-10 flex flex-col items-center text-center">
-<div class="w-11 h-11 bg-[var(--orange)] rounded-xl grid place-items-center text-white font-black">C</div>
-<h3 class="mt-6 font-bold text-">Besoin d'aide ?</h3>
-<p class="mt-2 text- text-zinc-500 max-w-">Problème d'installation ? Rejoins le canal WhatApp ou contact directement le +225 074 48 296 88 </p>
-<a href="https://whatsapp.com/channel/0029VbBrLYMGOj9txhx7zj12" target="_blank" class="mt-6 inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-full font-semibold text-sm">Ouvrir WhatsApp</a>
-<div class="mt-6 text- text-zinc-400">Bientôt sur Play Store • Version iOS en préparation</div>
-</div>
+<h2 style="font-family:'Instrument Serif';font-size:28px;margin-top:40px;margin-bottom:15px;text-align:center">Questions fréquentes sur Google</h2>
+<div style="max-width:800px;margin:0 auto;text-align:left">
+<details style="padding:12px;border-bottom:1px solid #eee"><summary style="font-weight:700;cursor:pointer">Comment trouver un binôme de permutation en Côte d'Ivoire ?</summary><p style="color:#666;margin-top:8px">Installez CHIASMA, créez votre profil vérifié, indiquez votre poste actuel (DRENA, IEPP, localité) et votre souhait. L'algorithme vous propose automatiquement les enseignants qui cherchent l'inverse.</p></details>
+<details style="padding:12px;border-bottom:1px solid #eee"><summary style="font-weight:700;cursor:pointer">CHIASMA est-il gratuit pour les enseignants ?</summary><p style="color:#666;margin-top:8px">Oui, 100% gratuit. Fait par un enseignant pour les enseignants. Aucun frais de dossier, pas de commission.</p></details>
+<details style="padding:12px;border-bottom:1px solid #eee"><summary style="font-weight:700;cursor:pointer">Quelle différence entre permutation et mutation ?</summary><p style="color:#666;margin-top:8px">La permutation est un échange de poste entre 2 enseignants d'accord. La mutation est décidée par le MENA. CHIASMA facilite la permutation volontaire.</p></details>
 </div>
 </section>
 
-<footer class="border-t bg-white">
-<div class="max-w- mx-auto px-6 lg:px-8 py-10 flex flex-col md:flex-row justify-between gap-4 text- text-zinc-500">
-<span>© 2026 CHIASMA.pro —</span>
-<span class="flex items-center gap-2"><span class="w-2 h-2 bg-green-500 rounded-full"></span>Fait par un enseignant pour les enseignants de Côte d'Ivoire</span>
-</div>
-</footer>
-
-<script>
-window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('bg-white/80',window.scrollY>20); document.getElementById('header').classList.toggle('backdrop-blur-xl',window.scrollY>20);})
-</script>
 </body>
 </html>
