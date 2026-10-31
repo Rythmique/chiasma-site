@@ -30,6 +30,23 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); colo
 </style>
 </head>
 <body class="selection:bg-[var(--orange-light)] selection:text-[var(--orange)]">
+  <!-- CODE 1 - BANDEAU DEFILANT URGENT - A COLLER JUSTE APRES <body> -->
+<style>
+  @keyframes defile { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+  .bandeau-urgent { background: #1A1300; color: white; font-size: 13px; padding: 10px 0; overflow: hidden; white-space: nowrap; position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; }
+  .bandeau-contenu { display: inline-block; animation: defile 25s linear infinite; padding-left: 100%; }
+  .bandeau-contenu a { background: #25D366; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 800; text-decoration: none; margin: 0 8px; }
+  .bandeau-contenu a:hover { background: #128C7E; }
+  /* On pousse la barre drapeau et le header un peu plus bas */
+  .drapeau-bar { top: 38px !important; }
+  #header { top: 42px !important; }
+</style>
+<div class="bandeau-urgent">
+  <div class="bandeau-contenu">
+    🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">CLIQUER ICI POUR WHATSAPP</a> pour nous écrire directement et on vous répond en moins de 2h. &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 🚨 Besoin urgent de permutation ? Merci de cliquer ici →
+  </div>
+</div>
+<!-- FIN CODE 1 -->
 
 <!-- DRAPEAU IVOIRIEN TOP -->
 <div class="drapeau-bar fixed top-0 inset-x-0 z-[60]"></div>
@@ -140,7 +157,33 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); colo
 </div>
 </div>
 </section>
+<!-- CODE 2 - BOUTONS CONTACT DIRECT - A COLLER JUSTE AVANT <!-- DOWNLOAD --> -->
+<section id="contact-direct" style="max-width:1200px; margin: 0 auto; padding: 40px 24px;">
+  <div style="background: white; border: 1px solid #F2EADF; border-radius: 28px; padding: 32px; text-align: center;">
+    <h3 style="font-family: 'Instrument Serif', serif; font-size: 28px; margin-bottom: 8px;">Une préoccupation ? Écrivez-nous direct</h3>
+    <p style="color: #7A6F5A; font-size: 14px; margin-bottom: 24px;">Cliquez sur un bouton, vous arrivez directement sur nos pages pour nous parler.</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; max-width: 700px; margin: 0 auto;">
+      
+      <!-- BOUTON WHATSAPP -->
+      <a href="https://wa.me/___TON_NUMERO_WHATSAPP_ICI___?text=Bonjour%20CHIASMA" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#25D366; color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
+        <span>💬</span> WhatsApp Direct
+      </a>
 
+      <!-- BOUTON FACEBOOK -->
+      <a href="___COLLE_TON_LIEN_FACEBOOK_ICI___" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background:#1877F2; color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
+        <span>📘</span> Page Facebook
+      </a>
+
+      <!-- BOUTON INSTAGRAM -->
+      <a href="___COLLE_TON_LIEN_INSTAGRAM_ICI___" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:10px; background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color:white; padding:14px 20px; border-radius: 16px; font-weight: 700; text-decoration:none;">
+        <span>📸</span> Instagram DM
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- FIN CODE 2 -->
 <!-- DOWNLOAD -->
 <section id="download" class="max-w- mx-auto px-6 lg:px-8 py-20 lg:py-28">
 <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-stretch">
