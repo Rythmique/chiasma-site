@@ -31,23 +31,24 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); colo
 </head>
 <body class="selection:bg-[var(--orange-light)] selection:text-[var(--orange)]">
   
-  <!-- CODE 1 - BANDEAU DEFILANT URGENT - A COLLER JUSTE APRES <body> -->
+<!-- CODE 1 - BANDEAU SANS COUPURE - NUMERO INTEGRE -->
 <style>
-  @keyframes defile { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
-  .bandeau-urgent { background: #1A1300; color: white; font-size: 13px; padding: 10px 0; overflow: hidden; white-space: nowrap; position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; }
-  .bandeau-contenu { display: inline-block; animation: defile 45s linear infinite; padding-left: 100%; }
-  .bandeau-contenu a { background: #25D366; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 800; text-decoration: none; margin: 0 8px; }
-  .bandeau-contenu a:hover { background: #128C7E; }
-  /* On pousse la barre drapeau et le header un peu plus bas */
+  @keyframes defile-loop { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  .bandeau-urgent { background: #1A1300; color: white; font-size: 13px; padding: 10px 0; overflow: hidden; white-space: nowrap; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+  .bandeau-track { display: flex; width: max-content; animation: defile-loop 45s linear infinite; }
+  .bandeau-contenu { display: flex; align-items: center; white-space: nowrap; padding-right: 50px; }
+  .bandeau-contenu a { background: #25D366; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 800; text-decoration: none; margin: 0 12px; }
   .drapeau-bar { top: 38px !important; }
   #header { top: 42px !important; }
 </style>
 <div class="bandeau-urgent">
-  <div class="bandeau-contenu">
-    🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a> pour nous écrire directement et on vous répond en moins de 2h. &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp; 🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">WHATSAPP</a>
+  <div class="bandeau-track">
+    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">CLIQUER ICI POUR WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">CLIQUER ICI POUR WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">CLIQUER ICI POUR WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
+    <span class="bandeau-contenu">🚨 Besoin urgent de permutation ? Merci de cliquer ici → <a href="https://wa.me/2250554419643?text=Bonjour%20CHIASMA%2C%20j%27ai%20un%20besoin%20urgent%20de%20permutation" target="_blank">CLIQUER ICI POUR WHATSAPP</a> &nbsp;&nbsp;&nbsp; • &nbsp;&nbsp;&nbsp;</span>
   </div>
 </div>
-<!-- FIN CODE 1 -->
 
 <!-- DRAPEAU IVOIRIEN TOP -->
 <div class="drapeau-bar fixed top-0 inset-x-0 z-[60]"></div>
